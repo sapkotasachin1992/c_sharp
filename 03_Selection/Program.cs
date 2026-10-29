@@ -5,7 +5,8 @@ class Program
     static void Main()
     {
         Program ss = new Program();
-        ss.SelectionStatement();
+        // ss.SelectionStatement();
+        ss.LearnSwitch();
     }
 
     void SelectionStatement()
@@ -13,14 +14,16 @@ class Program
 
         //we will be learning about selection statements
         //if else
-        byte x = 10;
+        byte x = byte.Parse(Console.ReadLine());
+        // byte x = 10;
 
 
         string result = x == 10 ? "same number" : "different number";
         Console.WriteLine(result);
 
-
-        byte y = Console.ReadLine();
+        Console.WriteLine("Enter your age");
+        string input = Console.ReadLine();
+        byte y = byte.Parse(input);
 
         if (y <= 18)
         {
@@ -31,9 +34,32 @@ class Program
             Console.WriteLine("You are eligible to vote");
         }
 
-        if (true)
+    }
+
+
+    void LearnSwitch()
+    {
+        Console.WriteLine("Enter your choice");
+        byte choice = byte.Parse(Console.ReadLine());
+        string result = "sunday";
+        switch (choice)
         {
-            Console.WriteLine("Streak maintained")
+            case 1:
+                result = "sunday";
+                break;
+            case 2:
+                result = "monday";
+                break;
+            case 3:
+                result = "Tuesday";
+                break;
+            default:
+                Console.WriteLine("Invalid Choice");
+                break;
         }
+
+        Console.WriteLine("Today is " + " " + result);
+
+
     }
 }
