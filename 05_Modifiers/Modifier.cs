@@ -23,6 +23,6 @@ class ModifierDemo
     public void DoSomething()
     {
         AccessModifier aa = new AccessModifier();
-        aa.
+        aa.DoAnotherThing();
     }
 }
